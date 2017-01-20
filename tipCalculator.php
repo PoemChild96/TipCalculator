@@ -13,7 +13,7 @@ error_reporting(E_ALL);
 
 	<body>
 		<?php 
-			$subtotal = null;
+			$subtotal = 0;
 			$tip = null;
 			$tipAmount = null;
 			$total = null;
@@ -44,7 +44,7 @@ error_reporting(E_ALL);
 
 			<button type="submit" class="submitBtn">Submit</button><br>
 
-			<div class="result" <?php if ($subtotal == null) echo "style='display:none'"?>>
+			<div class="result" <?php if ($subtotal == 0) echo "style='display:none'"?>>
 				<p>Tip: &#36;<?php echo $tipAmount ?></p>
 				<p>Total: &#36;<?php echo $total ?></p>
 					
