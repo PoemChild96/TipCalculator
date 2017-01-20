@@ -35,4 +35,10 @@ h1{
 
 
 }
+.error{
+	font-family: "Arial";
+	color:red;
+	font:bold;
+	text-align: center;
+}
 

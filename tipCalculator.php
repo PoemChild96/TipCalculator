@@ -43,6 +43,15 @@ error_reporting(E_ALL);
 			<br>
 
 			<button type="submit" class="submitBtn">Submit</button><br>
+			<?php
+				if(isset($_GET['subtotal'])){
+					if (!is_numeric($_GET['subtotal']) || $_GET['subtotal'] < 0){
+						?>
+						<p class="error">Please type a valid number!</p>
+						<?php
+					}
+				}
+			?>
 
 			<div class="result" <?php if ($subtotal == 0) echo "style='display:none'"?>>
 				<p>Tip: &#36;<?php echo $tipAmount ?></p>
